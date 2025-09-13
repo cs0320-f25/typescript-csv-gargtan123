@@ -7,10 +7,15 @@
 - #### Step 2: Use an LLM to help expand your perspective.
 
 - #### Step 3: use an LLM to help expand your perspective.
+My initial ideas: Functionality: What is underspecified is if we want to use other delimiters rather than just commas to split data. Also, what is underspecified is if there may be integers or non strings passed into the CSV and how to deal with those values. Extensibility: The function could validate the types of values passed into the CSV and make sure everything is in the right type. The function could also ensure each row/column has the same amount of values so that the CSV is in the correct format.
+LLM suggested: The LLM suggested to handle commas/newlines within quotes. It also suggested to let users select delimiters that might differ from commas (which I suggested as well). The LLM sugggested to allow users to declare the types of rows/columns so the parser does not have to infer. The results differed by prompt as when I asked an LLM simply to only list the top 5 most important issues, it was able to find the most important issues rather than smaller issues like making the UI more presentable but instead on handling quotes correctly, delimiters, and clear error handling. I resonate with handling the quotes correctly as well as the delimiters the most.
+FUNCTIONALITY:
+1. As a developer using the parser, I want quoted fields to be handled correctly so I can trust the data matches the CSV source. (Me)
+2. As a developer working with a large CSV, I want clear error messages with row and column numbers so I can quickly fix bad CSV data. (LLM)
+EXTENSIBILITY:
+3. as a developer, I want to configure delimiters and support different newline characters so parser works with CSVs from Excel etc. (Me + LLM)
+4. As a developer, I want headers normalized and validated so that my rows map to predictable keys and I catch errors early (LLM)
 
-    Include a list of the top 4 enhancements or edge cases you think are most valuable to explore in the next week’s sprint. Label them clearly by category (extensibility vs. functionality), and include whether they came from you, the LLM, or both. Describe these using the User Story format—see below for a definition. 
-
-    Include your notes from above: what were your initial ideas, what did the LLM suggest, and how did the results differ by prompt? What resonated with you, and what didn’t? (3-5 sentences.) 
 
 ### Design Choices
 

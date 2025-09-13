@@ -2,7 +2,6 @@ import { parseCSV } from "../src/basic-parser";
 import * as path from "path";
 
 const PEOPLE_CSV_PATH = path.join(__dirname, "../data/people.csv");
-
 test("parseCSV yields arrays", async () => {
   const results = await parseCSV(PEOPLE_CSV_PATH)
 
@@ -37,3 +36,4 @@ test("parseCSV does not coerce types (NOT GOOD!)", async () => {
   const results = await parseCSV(PEOPLE_CSV_PATH)
   expect(results[2][1]).toBe("thirty");
 });
+
