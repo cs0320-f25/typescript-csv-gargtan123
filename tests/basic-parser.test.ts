@@ -33,7 +33,7 @@ test("parseCSV has 2 columns per row", async () => {
   }
 });
 
-test("parseCSV does not coerce types", async () => {
+test("parseCSV does not coerce types (NOT GOOD!)", async () => {
   const results = await parseCSV(PEOPLE_CSV_PATH)
   expect(results[2][1]).toBe("thirty");
 });
