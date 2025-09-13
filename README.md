@@ -22,16 +22,14 @@ EXTENSIBILITY:
 ### 1340 Supplement
 
 - #### 1. Correctness
-
+A correct parser should always split rows with right amount of fields, should preserve order of original rows/columns, handle edge cases, and apply schemas correctly.
 - #### 2. Random, On-Demand Generation
-
+It could test many unexpected test cases automatically like varying lengths or working with bad data to show it works in edge cases I didn't think of
 - #### 3. Overall experience, Bugs encountered and resolved
-#### Errors/Bugs:
-#### Tests:
-#### How To…
 
+My overall experience was good in this sprint. It was open-ended with no specific step by step instructions for part C which I liked but also found a little difficult as I'm not fully sure my implementation works. I encountered bugs with figuring out how to run tests using jest but was able to figure it out using copilot asking how to run tests using jest.
 #### Team members and contributions (include cs logins):
 
 #### Collaborators (cslogins of anyone you worked with on this project and/or generative AI):
-#### Total estimated time it took to complete project:
-#### Link to GitHub Repo:  
+#### Total estimated time it took to complete project: 3
+#### Link to GitHub Repo:  https://github.com/cs0320-f25/typescript-csv-gargtan123
