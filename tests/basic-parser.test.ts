@@ -24,5 +24,16 @@ test("parseCSV yields only arrays", async () => {
 test("parseCSV contains header row (NOT GOOD!)", async () => {
   const results = await parseCSV(PEOPLE_CSV_PATH)
   expect(results[0]).toEqual(["name", "age"]);
-})
+});
 
+test("parseCSV has 2 columns per row", async () => {
+  const results = await parseCSV(PEOPLE_CSV_PATH)
+  for (const row of results) {
+    expect(row).toHaveLength(2);
+  }
+});
+
+test("parseCSV does not coerce types", async () => {
+  const results = await parseCSV(PEOPLE_CSV_PATH)
+  expect(results[2][1]).toBe("thirty");
+});
